@@ -11,7 +11,7 @@
     <div class="list-group mt-4">
         <h1>카테고리</h1>
         {% for question in question_list %}        
-        <a href="{% url 'poll:vote_form' question.pk %}" class="list-group-item list-group-item-action">
+        <a href="{% url 'poll:img_list' question.pk %}" class="list-group-item list-group-item-action">
             {{question.question_text|truncatewords:5}}
         </a>
         {% empty %}

@@ -25,6 +25,6 @@ def list(request):
 def vote_form(request, question_id):
     try:
         question = Question.objects.get(pk=question_id)
-        return render(request, "poll/vote_form.html", {"question": question})
+        return render(request, "poll/img_list.html", {"question": question})
     except:
         print("없는 질문을 요청했습니다")
