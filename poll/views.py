@@ -22,10 +22,10 @@ def list(request):
     question_list = Question.objects.all().order_by('-pub_date')
     return render(request, 'poll/list.html', {"question_list": question_list})
 
-def img_list(request, question_id):
+def img_list(request, category_id):
     try:
-        question = Question.objects.get(pk=question_id)
-        return render(request, "poll/img_list.html", {"question": question})
+        # question = Question.objects.get(pk=category_id)
+        return render(request, "poll/img_list.html", {"category_id": category_id})
     except:
         print("없는 질문을 요청했습니다")
 
