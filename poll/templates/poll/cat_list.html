@@ -10,9 +10,9 @@
 <body>
     <div class="list-group mt-4">
         <h1>CATEGORY_LIST</h1>
-        {% for question in question_list %}        
-        <a href="{% url 'poll:img_list' question.pk %}" class="list-group-item list-group-item-action">
-            {{question.question_text|truncatewords:5}}
+        {% for category in category_list %}        
+        <a href="{% url 'poll:img_list' category.pk %}" class="list-group-item list-group-item-action">
+            {{category.cat_name|truncatewords:5}}
         </a>
         {% empty %}
             <b>등록된 상품이 없습니다.</b>
