@@ -45,10 +45,14 @@
         <h1>이미지 그리드</h1>
         <div class="image-grid">
             <div class="image-item">
-                <img src="/static/category{{category_id}}/image1.jpg" alt="Image 1">
+                <a href="{% url 'poll:ans_vote' category_id %}" class="list-group-item list-group-item-action">
+                    <img src="/static/category{{category_id}}/image1.jpg" alt="Image 1">
+                </a>
             </div>
             <div class="image-item">
-                <img src="/static/category{{category_id}}/image2.jpg" alt="Image 2">
+                <a href="{% url 'poll:ans_vote' category_id %}" class="list-group-item list-group-item-action">
+                    <img src="/static/category{{category_id}}/image2.jpg" alt="Image 2">
+                </a>
             </div>
             <div class="image-item">
                 <img src="/static/category{{category_id}}/image3.jpg" alt="Image 3">
