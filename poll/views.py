@@ -20,5 +20,6 @@ def img_list(request, category_id):
     except:
         print("없는 질문을 요청했습니다")
 
-def ans_vote(request, img_path):
-    return render(request, "poll/ans_vote.html", {'img_path': img_path})
+def ans_vote(request, img_name):
+    i = Image_path.objects.get(img_name=img_name)
+    return render(request, "poll/ans_vote.html", {'img_path': i.img_path})

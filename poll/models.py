@@ -16,9 +16,9 @@ class Image_path(models.Model):
         return f"{self.id}. {self.img_path}"
     
 class Ans_vote(models.Model):
+    img_path = models.ForeignKey(Image_path, on_delete=models.CASCADE)
     ans_text = models.CharField(max_length= 100)
     votes = models.IntegerField(default= 0)
-    img_path = models.ForeignKey(Image_path, on_delete=models.CASCADE)
 
     # def __str__(self):
     #     return f"{self.id}. {self.ans_text}"

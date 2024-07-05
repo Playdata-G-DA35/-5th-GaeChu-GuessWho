@@ -46,7 +46,7 @@
         <div class="image-grid">
             {% for image in image_list %}
             <div class="image-item">
-                <a href="{% url 'poll:ans_vote' image.img_path %}">
+                <a href="{% url 'poll:ans_vote' image.img_name %}">
                     <img src="{{image.img_path}}" alt="{{image.img_name}}">
                 </a>                
             </div>
