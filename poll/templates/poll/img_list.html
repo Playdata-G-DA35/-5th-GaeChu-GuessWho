@@ -46,26 +46,9 @@
         <div class="image-grid">
             {% for image in image_list %}
             <div class="image-item">
-                <a href="/poll/ans_vote/1/" class="list-group-item list-group-item-action">
-                    <img src="/static/category{{category_id}}/img1.jpg" alt="Image 1">
-                </a>
-            </div>
-            <div class="image-item">
-                <a href="{% url 'poll:ans_vote' image.pk %}" class="list-group-item list-group-item-action">
-                    <img src="/static/category{{category_id}}/image2.jpg" alt="Image 2">
-                </a>
-            </div>
-            <div class="image-item">
-                <img src="/static/category{{category_id}}/image3.jpg" alt="Image 3">
-            </div>
-            <div class="image-item">
-                <img src="/static/category{{category_id}}/image4.jpg" alt="Image 4">
-            </div>
-            <div class="image-item">
-                <img src="/static/category{{category_id}}/image5.jpg" alt="Image 5">
-            </div>
-            <div class="image-item">
-                <img src="/static/category{{category_id}}/image6.jpg" alt="Image 6">
+                <a href="{% url 'poll:ans_vote' image.img_path %}">
+                    <img src="{{image.img_path}}" alt="{{image.img_name}}">
+                </a>                
             </div>
             {% endfor%}
         </div>

@@ -14,11 +14,11 @@ def cat_list(request):
 
 def img_list(request, category_id):
     try:
-        # question = Question.objects.get(pk=category_id)
-        image_list = Image_path.objects.all()
+        c = Category(pk=category_id)
+        image_list = Image_path.objects.filter(category = c)
         return render(request, "poll/img_list.html", {"category_id": category_id, "image_list": image_list})
     except:
         print("없는 질문을 요청했습니다")
 
-def ans_vote(request):
-    return render(request, "poll/ans_vote.html")
+def ans_vote(request, img_path):
+    return render(request, "poll/ans_vote.html", {'img_path': img_path})
