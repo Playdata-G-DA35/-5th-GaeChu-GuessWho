@@ -99,23 +99,33 @@
             </ul>
         </div>
     </nav>
+
     <div class="container">
         <div class="image-section">
-            <img src="{{img_path}}" alt="Sample Image">
+            <img src="/static/category{{category_id}}/{{img_name}}" alt="Sample Image">
         </div>
+
+        <h5>답변 목록</h5>
+        <div>
+            <ul>
+            {% for answer in ans_list %}
+                <li>{{ answer.ans_text }}</li>
+            {% endfor %}
+            </ul>
+        </div>        
+        
         <div class="comment-section">
             <h2>댓글</h2>
-            <form class="comment-form">
-                <textarea placeholder="댓글을 입력하세요..."></textarea>
-                <button type="button" onclick="addComment()">댓글 달기</button>
+            <form action="{% url 'poll:ans_create' category_id img_name %}" method="post">
+                {% csrf_token %}
+                <textarea name="content" id="content" rows="15"></textarea>
+                <input type="submit" value="답변등록">
             </form>
-            <div class="comment-list" id="commentList">
-                <!-- 댓글 항목이 여기 추가됩니다 -->
-            </div>
+
         </div>
     </div>
 
-    <script>
+    <!-- <script>
         function addComment() {
             const commentText = document.querySelector('.comment-form textarea').value;
             if (commentText.trim() === '') return;
@@ -130,6 +140,6 @@
             // 댓글 입력란 비우기
             document.querySelector('.comment-form textarea').value = '';
         }
-    </script>
+    </script> -->
 </body>
 </html>
