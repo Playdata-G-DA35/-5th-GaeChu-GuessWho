@@ -1,0 +1,28 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>댓글 목록</h2>
+  <div id="commentList">
+    <!-- 댓글 목록이 여기에 표시됩니다 -->
+  </div>
+
+  {% if user.is_authenticated %}
+    <h2>내 댓글 목록</h2>
+    <div id="myCommentList">
+      <!-- 내 댓글 목록이 여기에 표시됩니다 -->
+    </div>
+  {% endif %}
+  
+  <h2>댓글 달기</h2>
+  <form class="comment-form">
+    <textarea id="commentText" placeholder="댓글을 입력하세요..."></textarea>
+    <button type="button" onclick="addComment()">댓글 달기</button>
+  </form>
+  
+  <script>
+    const currentUser = {{ user.id }};  // 현재 로그인한 사용자의 ID
+    const postId = {{ post.id }};  // 현재 게시물의 ID
+    document.addEventListener("DOMContentLoaded", loadComments);  // 페이지 로드 시 댓글 불러오기
+  </script>
+  <script src="{% static 'poll/js/comments.js' %}"></script>
+{% endblock %}
