@@ -21,6 +21,12 @@
 # 요구사항 명세서
 
 # 화면 설계서
+ ![alt text](./readme_img/frame/001.png)
+ ![alt text](./readme_img/frame/002.png)
+ ![alt text](./readme_img/frame/003.png)
+ ![alt text](./readme_img/frame/004.png)
+ ![alt text](./readme_img/frame/005.png)
+ ![alt text](./readme_img/frame/006.png)
 
 # 애플리케이션 설계서
 ## 1. 데이터베이스 정의서
