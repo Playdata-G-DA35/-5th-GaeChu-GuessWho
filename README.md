@@ -31,9 +31,10 @@
   
   ![alt text](./readme_img/table_account.png)
 - poll 앱
-  - 테이블명: poll_category - 카테고리 관리
-  - 테이블명: poll_image_path - 이미지 관리
-  - 테이블명: poll_ans_vote - 댓글 및 좋아요 정보를 관리
+  - 테이블명 - 테이블 설명
+  - poll_category - 카테고리 관리
+  - poll_image_path - 이미지 관리
+  - poll_ans_vote - 댓글 및 좋아요 정보를 관리
   - 컬럼 정보
 
 ![alt text](./readme_img/table_poll.png) 
