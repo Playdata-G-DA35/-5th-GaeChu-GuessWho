@@ -13,11 +13,11 @@
             <ul class="navbar-nav me-auto">
                 {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a href="{%url 'poll:cat_list'%}" class="nav-link"><b>개추</b></a>
+                        <a href="{%url 'poll:cat_list'%}" class="nav-link"><b>Data Labeling</b></a>
                     </li>
                 {% else %}
                     <li class="nav-item">
-                        <a href="/" class="nav-link"><b>개추</b></a>
+                        <a href="/" class="nav-link"><b>Data Labeling</b></a>
                     </li>
                 {% endif %}
             </ul>

@@ -3,7 +3,7 @@
 {% block contents %}
 
 <div class="container my-5">
-    <h1 class="mb-4">CATEGORY LIST</h1>
+    <h1 class="mb-4">CATEGORY</h1>
     <div class="list-group">
         {% for category in category_list %}
             <a href="{% url 'poll:img_list' category.pk %}" class="list-group-item list-group-item-action">
