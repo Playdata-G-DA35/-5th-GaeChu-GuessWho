@@ -28,13 +28,15 @@
   - 테이블명: account_user
   - 테이블 설명: 고객정보를 관리
   - 컬럼 정보
+  
   ![alt text](./readme_img/table_account.png)
 - poll 앱
   - 테이블명: poll_category - 카테고리 관리
   - 테이블명: poll_image_path - 이미지 관리
   - 테이블명: poll_ans_vote - 댓글 및 좋아요 정보를 관리
   - 컬럼 정보
-  ![alt text](./readme_img/table_poll.png) 
+
+![alt text](./readme_img/table_poll.png) 
 ## 2. 프로그램 목록
 ![alt text](./readme_img/program_list.png)
 # 최종 보고서
