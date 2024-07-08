@@ -41,4 +41,4 @@ def ans_create(request, category_id, img_name):
 
     ans_list = Ans_vote.objects.filter(img_path = i)
 
-    return render(request, "poll/ans_vote.html", {'category_id': category_id, 'img_name': i.img_name, 'ans_list': ans_list})
+    return redirect('poll:ans_vote', category_id= category_id, img_name= i.img_name)
