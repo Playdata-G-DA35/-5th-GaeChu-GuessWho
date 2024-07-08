@@ -1,15 +1,20 @@
-{%extends "layout.html"%}
-{%block title%}카테고리{%endblock title%}
-{%block contents%}
+{% extends "layout.html" %}
+{% block title %}카테고리{% endblock title %}
+{% block contents %}
 
-
-<h1>CATEGORY_LIST</h1>
-    {% for category in category_list %}        
-    <a href="{% url 'poll:img_list' category.pk %}" class="list-group-item list-group-item-action">
-        {{category.cat_name|truncatewords:5}}
-    </a>
-    {% empty %}
-        <b>등록된 상품이 없습니다.</b>
-    {% endfor%}
+<div class="container my-5">
+    <h1 class="mb-4">CATEGORY LIST</h1>
+    <div class="list-group">
+        {% for category in category_list %}
+            <a href="{% url 'poll:img_list' category.pk %}" class="list-group-item list-group-item-action">
+                {{ category.cat_name|truncatewords:5 }}
+            </a>
+        {% empty %}
+            <div class="alert alert-warning" role="alert">
+                <b>등록된 상품이 없습니다.</b>
+            </div>
+        {% endfor %}
+    </div>
 </div>
-{%endblock contents%}
+
+{% endblock contents %}
