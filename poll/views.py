@@ -33,9 +33,12 @@ def ans_create(request, category_id, img_name):
     if request.method == 'POST':
         user = request.user
         comment = request.POST.get('content')
+        print(i)
         if comment:  # comment가 비어 있지 않은지 확인
-            #Ans_vote.objects.create(img_path=i, ans_text=comment, votes=0)
+            # Ans_vote.objects.create(img_path=i, ans_text=comment, votes=0)
             ans = Ans_vote(img_path= i, ans_text= comment, votes= 0)
             ans.save()
 
-    return redirect('poll:ans_vote', category_id=category_id, img_name=img_name)
+    ans_list = Ans_vote.objects.filter(img_path = i)
+
+    return render(request, "poll/ans_vote.html", {'category_id': category_id, 'img_name': i.img_name, 'ans_list': ans_list})
