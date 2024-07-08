@@ -21,11 +21,22 @@
 # 요구사항 명세서
 
 # 화면 설계서
+## 메인 페이지
  ![alt text](./readme_img/frame/001.png)
+
+## 회원가입 페이지
  ![alt text](./readme_img/frame/002.png)
+
+## 로그인 페이지
  ![alt text](./readme_img/frame/003.png)
+
+## 카테고리 페이지
  ![alt text](./readme_img/frame/004.png)
+
+## 카테고리 상세 이미지 페이지
  ![alt text](./readme_img/frame/005.png)
+
+## 댓글 작성 페이지
  ![alt text](./readme_img/frame/006.png)
 
 # 애플리케이션 설계서
